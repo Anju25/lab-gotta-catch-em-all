@@ -1,5 +1,6 @@
 package controller;
 
+//import java.io.Console;
 import java.io.IOException;
 
 
@@ -10,9 +11,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Bulbasaur;
+import model.Charizard;
+import model.Dragonite;
+import model.Mew;
+import model.Pikachu;
+
 @WebServlet(urlPatterns = { "/pokemon" })
 public class PokemonController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	//private static final String String= null;
 
 	public PokemonController() {
 		super();
@@ -33,67 +41,98 @@ public class PokemonController extends HttpServlet {
 		String value4 = request.getParameter("card4"); 
 		String value5 = request.getParameter("card5"); 
 
-		String msg = "";
+		String msg = " ";
 
 		if (value1 != null) {
 			
-			// Create the object for Bulbasaur class and use getters to retrieve the values	
-		/*	  
-			msg = "<center>" + //getter + "  #" + //getter;
-			request.setAttribute("message1",//getter);
-			request.setAttribute("character1", //getter);
-			request.setAttribute("type1",//getter;
-			request.setAttribute("evolution1", //getter);
-			request.setAttribute("baseExp1", //getter);*/
+			Bulbasaur obj1=new Bulbasaur(msg,0,msg,msg,msg,msg);
+	        String name=obj1.getPokemonName();
+	        int n=obj1.getPokemoNumber();
+	        String ch=obj1.getCharacteristics();
+	        String type=obj1.getType();
+	        String ev=obj1.getEvolution();
+	        String base=obj1.getBaseExp();
+	       System.out.println(name);
+	       System.out.println(ch);
+	       System.out.print(type);
+	       
+		    msg = "<center>" + name + "  #"+n;
+			request.setAttribute("message1",msg);
+			request.setAttribute("character1",ch);
+			request.setAttribute("type1",type);
+			request.setAttribute("evolution1",ev);
+			request.setAttribute("baseExp1", base);
 		}
 
 		if (value2 != null) {
 			// Create the object for Charizard class and use getters to retrieve the values	
 			
-			/*	  
-			msg = "<center>" + //getter + "  #" + //getter;
-			request.setAttribute("message2",//getter);
-			request.setAttribute("character2", //getter);
-			request.setAttribute("type2",//getter;
-			request.setAttribute("evolution2", //getter);
-			request.setAttribute("baseExp2", //getter);*/
+			Charizard obj2=new Charizard("Charizard",006,"\"Charizard is fit and strong and has the ability to soar up to ridiculous heights. With a single breath of fire, it can burn down forests and melt gigantic glaciers.",
+					"FIRE","CHARMELEON","240");
+	        String name=obj2.getPokemonName();
+	        int n=obj2.getPokemoNumber();
+	        String ch=obj2.getCharacteristics();
+	        String type=obj2.getType();
+	        String ev=obj2.getEvolution();
+	        String base=obj2.getBaseExp();
+			msg = "<center>" + name + "  #" + n;
+			request.setAttribute("message2",msg);
+			request.setAttribute("character2",ch);
+			request.setAttribute("type2",type);
+			request.setAttribute("evolution2",ev);
+			request.setAttribute("baseExp2", base);
 		}
 
 		if (value3 != null) {
-
-			// Create the object for Dragonite class and use getters to retrieve the values	
-
-			/*	  
-			msg = "<center>" + //getter + "  #" + //getter;
-			request.setAttribute("message3",//getter);
-			request.setAttribute("character3", //getter);
-			request.setAttribute("type3",//getter;
-			request.setAttribute("evolution3", //getter);
-			request.setAttribute("baseExp3", //getter);*/
+            Dragonite obj3=new Dragonite(msg,0,msg,msg,msg,msg);
+            String name=obj3.getPokemonName();
+	        int n=obj3.getPokemoNumber();
+	        String ch=obj3.getCharacteristics();
+	        String type=obj3.getType();
+	        String ev=obj3.getEvolution();
+	        String base=obj3.getBaseExp();
+			msg = "<center>" + name + "  #" + n;
+			request.setAttribute("message3",msg);
+			request.setAttribute("character3",ch);
+			request.setAttribute("type3",type);
+			request.setAttribute("evolution3",ev);
+			request.setAttribute("baseExp3",base);
 		}
 		if (value4 != null) {
 
 			// Create the object for Mew class and use getters to retrieve the values	
-			/*	  
-			msg = "<center>" + //getter + "  #" + //getter;
-			request.setAttribute("message4",//getter);
-			request.setAttribute("character4", //getter);
-			request.setAttribute("type4",//getter;
-			request.setAttribute("evolution4", //getter);
-			request.setAttribute("baseExp4", //getter);*/
+			Mew obj4=new Mew(msg,0,msg,msg,msg,msg);
+			    String name=obj4.getPokemonName();
+		        int n=obj4.getPokemoNumber();
+		        String ch=obj4.getCharacteristics();
+		        String type=obj4.getType();
+		        String ev=obj4.getEvolution();
+		        String base=obj4.getBaseExp();
+			msg = "<center>" + name + "  #" + n;
+			request.setAttribute("message4",msg);
+			request.setAttribute("character4",ch);
+			request.setAttribute("type4",type);
+			request.setAttribute("evolution4",ev);
+			request.setAttribute("baseExp4",base);
 		}
 
 		if (value5 != null) {
 
 			// Create the object for Pikachu class and use getters to retrieve the values	
 /*getter*/
-			/*	  
-			msg = "<center>" + //getter + "  #" + //getter;
-			request.setAttribute("message5",//getter);
-			request.setAttribute("character5", //getter);
-			request.setAttribute("type5",//getter;
-			request.setAttribute("evolution5", //getter);
-			request.setAttribute("baseExp5", //getter);*/
+			Pikachu obj5=new Pikachu(msg,0,msg,msg,msg,msg);
+			 String name=obj5.getPokemonName();
+		        int n=obj5.getPokemoNumber();
+		        String ch=obj5.getCharacteristics();
+		        String type=obj5.getType();
+		        String ev=obj5.getEvolution();
+		        String base=obj5.getBaseExp();
+			msg = "<center>" +  name + "  #" + n;
+			request.setAttribute("message5",msg);
+			request.setAttribute("character5",ch);
+			request.setAttribute("type5",type);
+			request.setAttribute("evolution5",ev);
+			request.setAttribute("baseExp5",base);
 
 		}
 
@@ -101,5 +140,7 @@ public class PokemonController extends HttpServlet {
 		rd.forward(request, response);
 
 	}
+
+	
 
 }

@@ -1,11 +1,10 @@
 package testing;
 
-/*
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import model.Bulbasaur;
 import model.Charizard;
 
 public class TestCharizard {
@@ -15,7 +14,7 @@ public class TestCharizard {
 		String temp = "Charizard is fit and strong and has the ability to soar up to ridiculous heights. With a single breath of fire, it can burn down forests and melt gigantic glaciers.";
 		assertEquals(temp,p.getCharacteristics());		
 		try {
-			Charizard p = new Charizard(null,0,null,null,null,null);
+			Charizard bulb = new Charizard(null,0,null,null,null,null);
 			temp = null;
 			bulb.getCharacteristics();
 		}
@@ -30,7 +29,7 @@ public class TestCharizard {
 		String temp = "FIRE";
 		assertEquals(temp,p.getType());		
 		try {
-			Charizard p = new Charizard(null,0,null,null,null,null);
+			Charizard p1 = new Charizard(null,0,null,null,null,null);
 			temp = null;
 			p1.getType();
 		}
@@ -41,13 +40,13 @@ public class TestCharizard {
 	
 	@Test
 	public void testEvolutionMethod() {
-		Charizard p = new Charizard("AAA",4,"Charizard is fit and strong and has the ability to soar up to ridiculous heights. With a single breath of fire, it can burn down forests and melt gigantic glaciers.","FIRE","CHARMELEON", "240" );
+		Charizard charizard = new Charizard("AAA",4,"Charizard is fit and strong and has the ability to soar up to ridiculous heights. With a single breath of fire, it can burn down forests and melt gigantic glaciers.","FIRE","CHARMELEON", "240" );
 		String temp = "CHARMELEON";
-		assertEquals(temp,p.getEvolution());		
+		assertEquals(temp,charizard.getEvolution());		
 		try {
 			Charizard p = new Charizard(null,0,null,null,null,null);
 			temp = null;
-			p1.getEvolution();
+			p.getEvolution();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -55,17 +54,16 @@ public class TestCharizard {
 	}
 	@Test
 	public void testBaseExpMethod() {
-		Charizard p = new Charizard("AAA",4,"Charizard is fit and strong and has the ability to soar up to ridiculous heights. With a single breath of fire, it can burn down forests and melt gigantic glaciers.","FIRE","CHARMELEON", "240" );
+		Charizard charizard = new Charizard("AAA",4,"Charizard is fit and strong and has the ability to soar up to ridiculous heights. With a single breath of fire, it can burn down forests and melt gigantic glaciers.","FIRE","CHARMELEON", "240" );
 		String temp = "240";
-		assertEquals(temp,p.getBaseExp());		
+		assertEquals(temp,charizard.getBaseExp());		
 		try {
 			Charizard p = new Charizard(null,0,null,null,null,null);
 			temp = null;
-			p1.getBaseExp();
+			p.getBaseExp();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 }
-*/

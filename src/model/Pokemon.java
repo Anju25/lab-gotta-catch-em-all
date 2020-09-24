@@ -8,3 +8,26 @@ package model;
 //Generate appropriate getters and setters.
 //Generate a two-argument constructor in the Pokemon class
 
+public class Pokemon
+{
+	String pokemonName;
+	int pokemoNumber;
+	public Pokemon(String pokemonName, int pokemoNumber) {
+		this.pokemonName = pokemonName;
+		this.pokemoNumber = pokemoNumber;
+	}
+	public String getPokemonName() {
+		return pokemonName;
+	}
+	public void setPokemonName(String pokemonName) {
+		this.pokemonName = pokemonName;
+	}
+	public int getPokemoNumber() {
+		return pokemoNumber;
+	}
+	public void setPokemoNumber(int pokemoNumber) {
+		this.pokemoNumber = pokemoNumber;
+	}
+	
+	
+}
